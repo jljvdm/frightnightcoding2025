@@ -15,10 +15,7 @@ class Oktober23 {
 
     fun solve(): String{
         var opgeteldeWaardes = input.split(",").map { input -> input.toInt() }.sum()
-        while (opgeteldeWaardes < 0){
-            opgeteldeWaardes += 360
-        }
-        return (opgeteldeWaardes % 360).toString()
+        return (((opgeteldeWaardes % 360) + 360) % 360).toString()
     }
 
     private fun readFile(): String {
