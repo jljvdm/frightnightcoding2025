@@ -5,6 +5,7 @@ import java.io.InputStreamReader
 
 class Oktober24 {
     val input: String
+    var geteld = emptyMap<Char, Int>()
 
     constructor(){
         println("Oktober 24")
@@ -12,13 +13,18 @@ class Oktober24 {
     }
 
     fun solve() : String{
-        return "TBD"
+        telKarakters()
+        return geteld.keys.filter {  sleutel -> geteld[sleutel] == 1 }.joinToString("")
     }
 
     private fun readFile(): String {
         val inputStream = javaClass.getResourceAsStream("/oktober24.txt")
             ?: throw IllegalArgumentException("File not found: oktober24.txt")
         return BufferedReader(InputStreamReader(inputStream)).readLines().first()
+    }
+
+    private fun telKarakters() {
+        geteld = input.groupingBy { it }.eachCount()
     }
 
 }
