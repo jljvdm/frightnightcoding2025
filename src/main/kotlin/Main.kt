@@ -3,6 +3,7 @@ import oktober23.Oktober23
 import oktober24.Oktober24
 import oktober25.Oktober25
 import oktober26.Oktober26
+import oktober27.Oktober27
 
 fun main() {
     println("Hello, Fright Night Coding 2025!")
@@ -11,4 +12,5 @@ fun main() {
     println(Oktober24().solve())
     println(Oktober25().solve())
     println(Oktober26().solve())
+    println(Oktober27().solve())
 }
