@@ -11,7 +11,7 @@ class Oktober28 {
         input = readFile()
     }
 
-    fun solve(): String{
+    fun solve(): String {
         val getal = input.first().toLong()
         val maxInt = 4294967296L
         val aantalMaalOverflow = getal / maxInt
