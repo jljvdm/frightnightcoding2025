@@ -15,7 +15,7 @@ class Oktober28 {
         val getal = input.first().toLong()
         val maxInt = 4294967296L
         val aantalMaalOverflow = getal / maxInt
-        val binaryString = java.lang.Long.toBinaryString(getal % maxInt)
+        val binaryString = (getal % maxInt).toString(2)
         return "$aantalMaalOverflow,$binaryString"
     }
 
