@@ -36,11 +36,7 @@ class Oktober29 {
 
 
     private fun geefLijstMetGesorteerdeStrings(): List<String> {
-        val lijst = mutableListOf<String>()
-        input.split(" ").map { it.toCharArray().sorted().joinToString("") }.forEach {
-            lijst.add(it)
-        }
-        return lijst.sorted()
+        return input.split(" ").map { it.toCharArray().sorted().joinToString("") }.sorted()
     }
 
     private fun readFile(): String {
